@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Graduation Gallery | Crafteako</title>
+
+  <!-- point at the same folder no matter where you are -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/graduation.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="/assets/images/logo_w_border.png" width="100" alt="Crafteako Home">
+      </a>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">Graduation Gallery</h1>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn"        data-filter="solo">Solo</button>
+      <button class="filter-btn"        data-filter="group">Group</button>
+      <button class="filter-btn"        data-filter="outdoor">Outdoor</button>
+      <button class="filter-btn"        data-filter="indoor">Indoor</button>
+      <button class="filter-btn"        data-filter="library">Library</button>
+    </div>
+
+    <div class="grid-container">
+      <div class="grid-item" data-tags="solo outdoor">
+        <a href="/graduation/sarthak.html">
+          <img src="/assets/images/Sarthak/sarthak-cover.jpg" alt="Sarthak">
+          <div class="info">
+            <h2>Sarthak</h2>
+            <p class="tags">Solo · Outdoor</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="grid-item" data-tags="group indoor">
+        <a href="/graduation/sagar.html">
+          <img src="/assets/images/Sagar/sagar-cover.jpg" alt="Sagar">
+          <div class="info">
+            <h2>Sagar</h2>
+            <p class="tags">Group · Indoor</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="grid-item" data-tags="solo library">
+        <a href="/graduation/sneha.html">
+          <img src="/assets/images/Sneha/sneha-g-1.jpg" alt="Sneha">
+          <div class="info">
+            <h2>Sneha</h2>
+            <p class="tags">Solo · Library</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script src="/assets/js/graduation.js"></script>
+</body>
+</html>

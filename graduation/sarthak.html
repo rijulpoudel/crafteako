@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sarthak Graduation | Crafteako</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/graduation.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+  />
+</head>
+<body>
+
+  <!-- theme toggle -->
+  <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+
+  <!-- Full-Screen Hero -->
+  <header
+    class="hero-full"
+    style="--hero-img:url('../assets/images/Sarthak/sarthak-cover.jpg')"
+  >
+    <div class="hero-text">
+      <h1>Sarthak</h1>
+      <p>Graduation Ceremony 2025</p>
+      <a href="#albums" class="down-arrow">⌄</a>
+    </div>
+  </header>
+
+  <!-- Mini-Gallery -->
+  <section id="albums" class="mini-gallery">
+    <a href="../assets/images/Sarthak/photo1.jpg"
+       data-lightbox="sarthak"
+       data-title="Sarthak 1">
+      <img src="../assets/images/Sarthak/photo1.jpg" alt="Sarthak 1">
+    </a>
+    <a href="../assets/images/Sarthak/photo2.jpg"
+       data-lightbox="sarthak"
+       data-title="Sarthak 2">
+      <img src="../assets/images/Sarthak/photo2.jpg" alt="Sarthak 2">
+    </a>
+    <a href="../assets/images/Sarthak/photo3.jpg"
+       data-lightbox="sarthak"
+       data-title="Sarthak 3">
+      <img src="../assets/images/Sarthak/photo3.jpg" alt="Sarthak 3">
+    </a>
+  </section>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"
+  ></script>
+  <script>
+    // theme toggle logic
+    (function(){
+      const btn  = document.getElementById('theme-toggle'),
+            root = document.documentElement,
+            saved = localStorage.getItem('theme');
+      if(saved) root.setAttribute('data-theme', saved);
+      btn.addEventListener('click', ()=>{
+        const next = root.getAttribute('data-theme')==='dark'? '' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+    })();
+  </script>
+</body>
+</html>
