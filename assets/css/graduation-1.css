@@ -1,0 +1,200 @@
+/* assets/css/graduation.css */
+
+/* ── Theme Variables ─────────────────────────────────────────────────── */
+:root {
+    /* Light theme (default) */
+    --bg-color:     #ffffff;
+    --text-color:   #344D66;    /* general page text */
+    --card-bg:      #f5f5f5;
+    --card-shadow:  rgba(0, 0, 0, 0.1);
+  
+    /* We force hero‐text to white, see below */
+  }
+  
+  [data-theme="dark"] {
+    /* Dark theme overrides */
+    --bg-color:     #344D66;
+    --text-color:   #ffffff;
+    --card-bg:      #2c3e50;
+    --card-shadow:  rgba(0, 0, 0, 0.3);
+  }
+  
+  /* ── Global Reset ────────────────────────────────────────────────────── */
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Gordita', sans-serif;
+  }
+  
+  /* ── Font Faces ──────────────────────────────────────────────────────── */
+  @font-face {
+    font-family: 'AW';
+    src: url('../font/AWConqueror/AW-light.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'Playfair Display';
+    src: url('../font/playfair-display/PlayfairDisplay-Regular.otf') format('opentype');
+  }
+  
+  /* ── Grid Item & Mini-Gallery Cards ─────────────────────────────────── */
+  .grid-item,
+  .mini-gallery a {
+    background: var(--card-bg);
+    box-shadow: 0 4px 10px var(--card-shadow);
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+  
+  /* tweak per album */
+  .grid-item--sneha img   { object-position: center 40%; }
+  .grid-item--sarthak img { object-position: center   0%; }
+  
+  /* ── Hero Fullscreen (Individual Pages) ─────────────────────────────── */
+  .hero-full {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: var(--hero-img);
+    background-size: cover;
+    background-position: left 40% center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+  
+  /* a single even dark tint, top→bottom, works both light & dark */
+  .hero-full::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.3)
+    );
+    pointer-events: none;
+  }
+  
+  /* ── Hero Text & Arrow (always white for contrast) ──────────────────── */
+  .hero-text {
+    position: relative;
+    z-index: 1;
+    margin-left: 5vw;
+    text-align: center;
+    color: #fff !important;        /* force white */
+  }
+  .hero-text h1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+  }
+  .hero-text p {
+    margin: 0.5rem 0 1.5rem;
+    font-family: 'Gordita', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+  .hero-text .down-arrow {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 3rem;
+    color: currentColor;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50%     { transform: translateY(10px); }
+  }
+  
+  /* ── Tall/Narrow: show whole image (no crop) ───────────────────────── */
+  @media (max-aspect-ratio: 3/2) {
+    .hero-full {
+      background-size: contain;
+      background-position: center center;
+      background-color: var(--bg-color);
+    }
+  }
+  
+  /* ── Mini-Gallery (Masonry) ─────────────────────────────────────────── */
+  .mini-gallery {
+    column-count:   3;
+    column-gap:     40px;
+    max-width:      1200px;
+    margin:         0 auto;
+    padding:        40px 20px;
+  }
+  .mini-gallery a {
+    display:          inline-block;
+    width:            100%;
+    margin:           0 0 40px;
+    break-inside:     avoid;
+  }
+  .mini-gallery img {
+    width:            100%;
+    height:           auto;
+    display:          block;
+    object-fit:       cover;
+    border-radius:    0;
+    box-shadow:       0 4px 20px rgba(0,0,0,0.2);
+    transition:       transform 0.3s ease;
+  }
+  .mini-gallery img:hover {
+    transform: scale(1.03);
+  }
+  @media (max-width: 1000px) {
+    .mini-gallery { column-count: 2; }
+  }
+  @media (max-width: 600px) {
+    .mini-gallery { column-count: 1; }
+  }
+  
+  /* ── Album Grid (Individual Images) ─────────────────────────────────── */
+  .album-gallery {
+    max-width:            1200px;
+    margin:               0 auto;
+    padding:              60px 20px;
+    display:              grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:                  20px;
+    background:           var(--bg-color);
+  }
+  .album-gallery img {
+    width:                100%;
+    height:               auto;
+    object-fit:           cover;
+    border-radius:        10px;
+    box-shadow:           0 4px 15px rgba(0,0,0,0.2);
+    transition:           transform 0.3s;
+    cursor:               pointer;
+  }
+  .album-gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ── Theme Toggle Button ─────────────────────────────────────────────── */
+  #theme-toggle {
+    background: transparent;
+    border:     none;
+    font-size:  1.5rem;
+    cursor:     pointer;
+    color:      var(--text-color);
+    position:   fixed;
+    top:        1rem;
+    right:      1rem;
+    z-index:    1000;
+  }
+  
