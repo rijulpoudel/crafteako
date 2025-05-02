@@ -1,149 +1,63 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sarthak Graduation | Crafteako</title>
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/graduation.css" />
+
+  <!-- your main styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/graduation-1.css">
+  <!-- lightbox CSS -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
   />
 </head>
 <body>
-  <!DOCTYPE html>
-  <html lang="en" data-theme="">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sagar Graduation | Crafteako</title>
-  
-    <!-- your main styles -->
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/graduation-1.css">
-    <!-- lightbox CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
-    />
-  </head>
-  <body>
-    <!-- Theme toggle -->
-    <button id="theme-toggle" aria-label="Toggle light/dark mode" class="theme-toggle">
-      🌓
-    </button>
-  
-    <!-- Full‐Screen Hero -->
-    <header
-      class="hero-full"
-      style="background-image: url('../assets/images/Sagar/sagar-cover.jpg')"
-    >
-      <div class="hero-text">
-        <h1>Sagar</h1>
-        <p>Graduation Ceremony 2025</p>
-        <a href="#albums" class="down-arrow">⌄</a>
-      </div>
-      <a href="#albums" class="down-arrow"></a>
-    </header>
-  
-    <!-- Mini‐Gallery Section -->
-    <section id="albums" class="mini-gallery">
-      <a href="../assets/images/Sagar/sagar-1.jpg" data-lightbox="sagar" data-title="Sagar 1">
-        <img src="../assets/images/Sagar/sagar-1.jpg" alt="Sagar 1">
-      </a>
-      <a href="../assets/images/Sagar/sagar-2.jpg" data-lightbox="sagar" data-title="Sagar 2">
-        <img src="../assets/images/Sagar/sagar-2.jpg" alt="Sagar 2">
-      </a>
-      <a href="../assets/images/Sagar/sagar-3.jpg" data-lightbox="sagar" data-title="Sagar 3">
-        <img src="../assets/images/Sagar/sagar-3.jpg" alt="Sagar 3">
-      </a>
-      <a href="../assets/images/Sagar/sagar-4.jpg" data-lightbox="sagar" data-title="Sagar 4">
-        <img src="../assets/images/Sagar/sagar-4.jpg" alt="Sagar 4">
-      </a>
-      <a href="../assets/images/Sagar/sagar-5.jpg" data-lightbox="sagar" data-title="Sagar 5">
-        <img src="../assets/images/Sagar/sagar-5.jpg" alt="Sagar 5">
-      </a>
-      <a href="../assets/images/Sagar/sagar-6.jpg" data-lightbox="sagar" data-title="Sagar 6">
-        <img src="../assets/images/Sagar/sagar-6.jpg" alt="Sagar 6">
-      </a>
-      <a href="../assets/images/Sagar/sagar-7.jpg" data-lightbox="sagar" data-title="Sagar 7">
-        <img src="../assets/images/Sagar/sagar-7.jpg" alt="Sagar 7">
-      </a>
-    </section>
-  
-    <!-- lightbox JS -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"
-    ></script>
-  
-    <!-- theme toggle script -->
-    <script>
-      (function() {
-        const btn = document.getElementById('theme-toggle');
-        const root = document.documentElement;
-        // apply saved theme on load
-        const saved = localStorage.getItem('theme');
-        if (saved === 'dark') root.setAttribute('data-theme', 'dark');
-  
-        btn.addEventListener('click', () => {
-          const isDark = root.getAttribute('data-theme') === 'dark';
-          root.setAttribute('data-theme', isDark ? '' : 'dark');
-          localStorage.setItem('theme', isDark ? '' : 'dark');
-        });
-      })();
-    </script>
-  </body>
-  </html>
-  
-  <!-- theme toggle -->
-  <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+  <!-- Theme toggle -->
+  <button id="theme-toggle" aria-label="Toggle light/dark mode" class="theme-toggle">
+    🌓
+  </button>
 
-  <!-- Full-Screen Hero -->
+  <!-- Full‐Screen Hero -->
   <header
     class="hero-full"
-    style="--hero-img:url('../assets/images/Sarthak/sarthak-cover.jpg')"
+    style="background-image: url('../assets/images/Sarthak/sarthak-cover.jpg')"
   >
     <div class="hero-text">
       <h1>Sarthak</h1>
       <p>Graduation Ceremony 2025</p>
       <a href="#albums" class="down-arrow">⌄</a>
     </div>
+    <a href="#albums" class="down-arrow"></a>
   </header>
 
-  <!-- Mini-Gallery -->
+  <!-- Mini‐Gallery Section -->
   <section id="albums" class="mini-gallery">
-    <a href="../assets/images/Sarthak/photo1.jpg"
-       data-lightbox="sarthak"
-       data-title="Sarthak 1">
-      <img src="../assets/images/Sarthak/photo1.jpg" alt="Sarthak 1">
-    </a>
-    <a href="../assets/images/Sarthak/photo2.jpg"
-       data-lightbox="sarthak"
-       data-title="Sarthak 2">
-      <img src="../assets/images/Sarthak/photo2.jpg" alt="Sarthak 2">
-    </a>
-    <a href="../assets/images/Sarthak/photo3.jpg"
-       data-lightbox="sarthak"
-       data-title="Sarthak 3">
-      <img src="../assets/images/Sarthak/photo3.jpg" alt="Sarthak 3">
+    <a href="../assets/images/Sarthak/sarthak-1.jpg" data-lightbox="sarthak" data-title="Sarthak 1">
+      <img src="../assets/images/Sarthak/sarthak-1.jpg" alt="Sarthak 1">
     </a>
   </section>
 
+  <!-- lightbox JS -->
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"
   ></script>
+
+  <!-- theme toggle script -->
   <script>
-    // theme toggle logic
-    (function(){
-      const btn  = document.getElementById('theme-toggle'),
-            root = document.documentElement,
-            saved = localStorage.getItem('theme');
-      if(saved) root.setAttribute('data-theme', saved);
-      btn.addEventListener('click', ()=>{
-        const next = root.getAttribute('data-theme')==='dark'? '' : 'dark';
-        root.setAttribute('data-theme', next);
-        localStorage.setItem('theme', next);
+    (function() {
+      const btn = document.getElementById('theme-toggle');
+      const root = document.documentElement;
+      // apply saved theme on load
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') root.setAttribute('data-theme', 'dark');
+
+      btn.addEventListener('click', () => {
+        const isDark = root.getAttribute('data-theme') === 'dark';
+        root.setAttribute('data-theme', isDark ? '' : 'dark');
+        localStorage.setItem('theme', isDark ? '' : 'dark');
       });
     })();
   </script>
