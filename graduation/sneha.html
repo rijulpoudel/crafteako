@@ -1,37 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sneha Graduation | Crafteako</title>
+
+  <!-- your main styles -->
   <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/graduation.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+  <link rel="stylesheet" href="../assets/css/graduation-1.css">
+  <!-- lightbox CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+  />
 </head>
 <body>
+  <!-- Theme toggle -->
+  <button id="theme-toggle" aria-label="Toggle light/dark mode" class="theme-toggle">
+    🌓
+  </button>
 
   <!-- Full‐Screen Hero -->
-  <header class="hero-full" style="background-image: url('../assets/images/Sneha/sneha-g-1.jpg');">
+  <header
+    class="hero-full"
+    style="background-image: url('../assets/images/Sneha/sneha-cover.jpg')"
+  >
     <div class="hero-text">
       <h1>Sneha</h1>
       <p>Graduation Ceremony 2025</p>
+      <a href="#albums" class="down-arrow">⌄</a>
     </div>
-    <a href="#albums" class="down-arrow">⌄</a>
+    <a href="#albums" class="down-arrow"></a>
   </header>
 
   <!-- Mini‐Gallery Section -->
   <section id="albums" class="mini-gallery">
-    <a href="../assets/images/Sneha/sneha-g-1.jpg" data-lightbox="sneha" data-title="Sneha 1">
+    <a href="../assets/images/Sagar/sneha-g-1.jpg" data-lightbox="sneha" data-title="Sneha 1">
       <img src="../assets/images/Sneha/sneha-g-1.jpg" alt="Sneha 1">
     </a>
-    <a href="../assets/images/Sneha/sneha-g-2.jpg" data-lightbox="sneha" data-title="Sneha 2">
+    <a href="../assets/images/Sagar/sneha-g-2.jpg" data-lightbox="sneha" data-title="Sneha 2">
       <img src="../assets/images/Sneha/sneha-g-2.jpg" alt="Sneha 2">
     </a>
-    <a href="../assets/images/Sneha/sneha-library-1.jpg" data-lightbox="sneha" data-title="Sneha 3">
-      <img src="../assets/images/Sneha/sneha-library-1.jpg" alt="Sneha 3">
+    <a href="../assets/images/Sagar/sneha-g-3.jpg" data-lightbox="sneha" data-title="Sneha 3">
+      <img src="../assets/images/Sneha/sneha-g-3.jpg" alt="Sneha 3">
     </a>
+    <a href="../assets/images/Sagar/sneha-g-4.jpg" data-lightbox="sneha" data-title="Sneha 4">
+      <img src="../assets/images/Sneha/sneha-g-4.jpg" alt="Sneha 4">
+    </a>
+    <a href="../assets/images/Sagar/sneha-g-5.jpg" data-lightbox="sneha" data-title="Sneha 5">
+      <img src="../assets/images/Sneha/sneha-g-5.jpg" alt="Sneha 5">
+    </a>
+    <a href="../assets/images/Sagar/sneha-g-6.jpg" data-lightbox="sneha" data-title="Sneha 6">
+      <img src="../assets/images/Sneha/sneha-g-6.jpg" alt="Sneha 6">
+    </a>
+    <a href="../assets/images/Sagar/sneha-g-7.jpg" data-lightbox="sneha" data-title="Sneha 7">
+      <img src="../assets/images/Sneha/sneha-g-7.jpg" alt="Sneha 7">
+    </a>
+    <a href="../assets/images/Sagar/sneha-g-8.jpg" data-lightbox="sneha" data-title="Sneha 8">
+      <img src="../assets/images/Sneha/sneha-g-8.jpg" alt="Sneha 8">
+    </a>
+    <a href="../assets/images/Sagar/sneha-g-9.jpg" data-lightbox="sneha" data-title="Sneha 9">
+      <img src="../assets/images/Sneha/sneha-g-9.jpg" alt="Sneha 9">
+    </a>
+    <a href="../assets/images/Sagar/sneha-g-10.jpg" data-lightbox="sneha" data-title="Sneha 10">
+      <img src="../assets/images/Sneha/sneha-g-10.jpg" alt="Sneha 10">
+    </a>
+    <a href="../assets/images/Sagar/sneha-g-11.jpg" data-lightbox="sneha" data-title="Sneha 11">
+      <img src="../assets/images/Sneha/sneha-g-11.jpg" alt="Sneha 11">
+    </a>
+    <a href="../assets/images/Sagar/sneha-g-12.jpg" data-lightbox="sneha" data-title="Sneha 11">
+      <img src="../assets/images/Sneha/sneha-g-12.jpg" alt="Sneha 12">
+    </a>
+
+    
+
+
   </section>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+  <!-- lightbox JS -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"
+  ></script>
+
+  <!-- theme toggle script -->
+  <script>
+    (function() {
+      const btn = document.getElementById('theme-toggle');
+      const root = document.documentElement;
+      // apply saved theme on load
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') root.setAttribute('data-theme', 'dark');
+
+      btn.addEventListener('click', () => {
+        const isDark = root.getAttribute('data-theme') === 'dark';
+        root.setAttribute('data-theme', isDark ? '' : 'dark');
+        localStorage.setItem('theme', isDark ? '' : 'dark');
+      });
+    })();
+  </script>
 </body>
 </html>
